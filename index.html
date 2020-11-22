@@ -1,157 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>D3Challenge</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/d3Style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <title>D3-Challenge</title>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
+    <div class="wrapper">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">Health Risks vs. Demographics</a>
+            </div>
+          </div>
+        </nav>
+    </div>    
+
+    <div class="container-fluid">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to US Health Analytics, select the analysis you want to see!</h1>
+        </div>    
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-      <a class="navbar-brand" href="index.html">
-        <h1>Health Risks vs. Demographics</h1>
-      </a>
-    </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <h3>Health Risks according to basic Demographic variables </h3>
-      </div>
+        <div class="col-md-12">
+            <div class="hero-unit">
+                <h1>Basic Analysis</h1>
+                <p>Go this page if you want to see the correlation between Poverty rates and Healthcare in the US.</p>
+                <p>
+                  <a class="btn btn-primary btn-large" href="basic/index.html">
+                    Go!
+                  </a>
+                </p>
+            </div>
+            <hr>
+            <div class="hero-unit">
+              <h1>Upgrade Analysis, Impress the Boss!</h1>
+              <p>Go this page if you want to see the correlation among multivariable Health and Demographics in the US.</p>
+              <p>
+                <a class="btn btn-primary btn-large" href="bonus/index.html">
+                  Go!
+                </a>
+              </p>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <div id="scatter">
-          <!-- We append our chart here. -->
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Poverty and Lack of Healthcare:</h2>
-          <p>Low-income households are more likely to be uninsured than people from higher income households, 
-            but not all uninsured belongs to low income families. Texas shows the highest number of uninsured, 
-            but does not have the highest number of families in poverty and New Hampshire shows the lowest poverty
-            levels without having the highest health insured rates. Even though, it is clear that low poverty 
-            rates states shows less uninsured percentages than higher poverty states. 
-            It seems that helth insurance is conditioned by some other factors, since even mid wealthy or wealthier
-            states have low or even lack of a healthcare culture.
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Poverty and Smoking habits:</h2>
-          <p>In the U.S., poverty level shows higher rates of smoking habits than the general population. However, poverty does not appear to be the only factor
-            that contributes to the likelihood of smoking. States like California and New York fall around the median in terms of poverty rates, but 
-            have some of the lowest rates of smoking relative to their populations. For example, Massachusetts shows some of the higher rates of poverty without
-            being the higher smoker state. As well as West Virginia, which shows high level of smoking habits but a medium poverty level. So, even when 
-            poverty did not determines the smoking habit is a great contributor.
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Poverty and Obesity issues:</h2>
-          <p>The U.S. is one of the wealthiest countries in the world and accordingly has high obesity rates. 
-            One-third of the population has obesity plus another third is overweight. It has been suggested that individuals who live in 
-            impoverished regions have poor access to fresh food. Poverty-dense areas are oftentimes called “food deserts,” 
-            implying diminished access to fresh food. Again, there are states, such as New Hampshire, that have very low poverty rates but still have relatively
-            higher rates of obesity, as well as North Dakota which is one of the wealthiest states with high obesity rates. So poverty is not necessarily 
-            a condition for an obese population.
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Age and Lack of Healthcare:</h2>
-          <p>Compared with other age groups, young adults are the most likely to go without coverage. This can be expected since young adults tend to be much healthier than other age groups,
-            and can risk being uninsured. Massachusetts appears to be the less uninsured, specially at middle ages. While Texas has the highest uninsurance rates at younger ages.
-            A surprising case is Florida, where lack of healthcaring is high at median ages, which is higher than other states (42 years old).
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Age and Smoking habits:</h2>
-          <p>It appears that states with a large proportion of elderly groups have the highest somoking rates. West Virginia has one of the highest smoking rates 
-            among the elder population. As opposed to states like Utah where the median age is very low, and much of the population doesn't smoke at all.
-            Even though, it looks that smoking habits are concentrated among ages of 36 and 42 years old, being Los Angeles one of the youngest states with higher somoking habits.
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Age and Obesity issues:</h2>
-          <p>There is a high concentration of obesity in between median age states. Arkansa with 38 years old median, is the highest obesity rate of 36%.
-            It seems that higher age groups are more succeptible to being obese, but that is likely not always the case. Colorado shows the lowest obesity rates 
-            with a median age of 36 years old, while Utah shows a median obesity rates among younger people, with a median age of 30. Maine, a state with elder population
-            shows a median obesity rate of 28%. Elder groups are less active which could explain obese tendencies. 
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Income and Lack of Healthcare:</h2>
-          <p>Many uninsured people cite the high cost of insurance as the main reason they lack coverage. Most uninsured people are in low-income families and have at least one worker in the family. 
-            Reflecting the more limited availability of public coverage in some states. This is quite clearly the case in Texas where the level of uninsured individuals is the highest in the country.
-            Eventhough surprisingly, a high income state like Mississippi as a lower income state, shows medium-high lack of healthcare culture.
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Income and Smoking habtis:</h2>
-          <p>A household's income contributes directly to the level of poverty. States with lower median household income will tend to also have higher smoking rates. States with relatively higher median incomes 
-            have some of the lowest smoking rates. But this chart in particular shows a clear direct correlation between lower income and higher smoking rates, with West Virgina and Massachusetts, 
-            both lower income states, showing the highest smoking rates in the country.
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-      <div class="col-xs-6  col-md-4">
-        <div class="article">
-          <h2>Income and Obesity issues:</h2>
-          <p>Overall obesity prevalence does tend to decrease with increased levels of income. Just as smoking, it seems to exist a direct correlation between obesity and household income, which 
-            affects the possibility to acquire healthy food options. Massachusetts and West Virginia, also looks like to have the higher obesity rates while being the less income generators. 
-            Lower income residents, specially in high cost cities, likely do not have the same access to healthier food choices as does higher income groups.
-          </p>
-          <p> -----------------------------------------------------</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer-->
-  <div id="footer">
-    <p>Gabriela Olivares Martinez&copy; 2020</p>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>  <!--DataVisInteractive 15.3-6:display graph on screen -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script> <!--D3js 16.3-12:gives movement and axis transitions-->
-  <!--<script type="text/javascript" src="assets/js/app.js"></script>-->
-  <script type="text/javascript" src="assets/js/bonus.js"></script>
-
-</body>
-
-</html>
+  
+</body></html>
