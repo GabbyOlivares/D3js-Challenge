@@ -82,6 +82,14 @@ Why making a static graphic when D3 lets you interact with my data?
 
 **CHALLENGE COMPLETED!!**
 
+#### Sources
+[Learn D3](https://scrimba.com/learn/d3js)
+
+[Updating graphs in D3](https://stackoverflow.com/questions/36388122/how-to-update-a-graph-in-d3-js-when-pressing-a-button)
+
+
+
+
 
 - - -
 
