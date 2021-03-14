@@ -89,7 +89,7 @@ Why making a static graphic when D3 lets you interact with my data?
 
 [D3 enter, update, exit](https://observablehq.com/@maliky/d3js-enter-update-and-exit)
 
-[Learn D3](https://scrimba.com/learn/d3js)
+[D3 dynamic button](http://www.d3noob.org/2013/02/update-d3js-data-dynamically-button.html)
 
 
 
