@@ -104,6 +104,10 @@ Evaluation parameter metrics:
 
 **GREAT CHALLENGE!**
 
+<br>
+<br>
+
 ### Copyright
 
-Trilogy Education Services © 2019. All Rights Reserved.
+##### © 2020 Gabriela Loami Olivares Martinez, BootCamp Tecnologico de Monterrey.
+##### © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved. 
